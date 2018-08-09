@@ -7,8 +7,10 @@ the two documents differ.
 computed to determine the similarity percentage.
 
 User manual:
---> Run all the files on terminal using the command
+--> Compile all the files on terminal using the command
 g++ check.h check.cpp checkmain.cpp
+--> Run using the command
+./a.out
 --> enter the names of the files you want to compare or check for Plagiarism
 --> A result of 0(in degrees) means that the two files are really similar, a
 result of 90(in degrees ) will imply that that two documents differ and have no
