@@ -29,6 +29,10 @@ void check::convert_tolines(string file1,string file2)
   }
   convert_towords(result,words1);
   convert_towords(result1,words2);
+  store_words(words1,hashmap1);
+  store_words(words2,hashmap2);
+  helper_toprintmap(hashmap1);
+  helper_toprintmap(hashmap2);
 }
 void check::convert_towords(string t,vector<string>& temp)
 {
@@ -44,5 +48,28 @@ for(int i=0;i<t.length();i++)
   {
     s=s+t[i];
   }
+}
+}
+void check::store_words(vector<string>& words,map<string,int>& hashmap)
+{
+for(int i=0;i<words.size();i++)
+{
+  string topush=words[i];
+  if(hashmap.find(topush)!=hashmap.end())
+  {
+    hashmap[topush]=hashmap[topush]+1;
+  }
+  else
+  {
+    hashmap[topush]=1;
+  }
+}
+}
+void check::helper_toprintmap(map<string,int>& map1)
+{
+map<string,int>::iterator it;
+for(it=map1.begin();it!=map1.end();++it)
+{
+  cout << "first = " << it->first << " second = " << it->second << endl;
 }
 }
